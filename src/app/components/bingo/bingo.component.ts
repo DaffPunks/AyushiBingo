@@ -5,7 +5,7 @@ import {forkJoin} from 'rxjs';
 @Component({
     selector: 'app-bingo',
     templateUrl: './bingo.component.html',
-    styleUrls: ['./bingo.component.css'],
+    styleUrls: ['./bingo.component.scss'],
     providers: [BingoService]
 })
 export class BingoComponent {
