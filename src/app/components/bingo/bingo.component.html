@@ -2,8 +2,16 @@
   <div class="game-table clearfix" *ngIf="cells && my_cells">
     <div class="game-cell-wrap" *ngFor="let item of cells">
       <div class="game-cell" [ngClass]="{'active': isChecked(item.id)}" (click)="toggleCell(item.id)">
-        {{item.condition}}
+        <div class="game-cell-name">{{item.condition}}</div>
+        <div class="game-cell-number">{{('0' + item.id).slice(-2)}}</div>
       </div>
+    </div>
+  </div>
+
+  <div class="game-mobile game-cond">
+    <div class="game-cond-item clearfix" *ngFor="let item of cells">
+      <div class="game-cond-id">{{('0' + item.id).slice(-2)}}</div>
+      <div class="game-cond-name">{{item.condition}}</div>
     </div>
   </div>
 </div>

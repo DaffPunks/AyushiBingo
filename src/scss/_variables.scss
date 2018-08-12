@@ -1,0 +1,19 @@
+// Palette
+$color_pink:          #FF3366;
+$color_dark_1:        #2A273A;
+$color_dark_2:        #242132;
+$color_dark_3:        #211E2D;
+$color_white:         #FFFFFF;
+$color_tr_white:      rgba(255,255,255,0.1);
+$color_blue:          #00ACEE;
+
+// Components colors
+$color_bg:            $color_dark_2;
+$color_header:        $color_dark_1;
+$color_header_btm:    $color_dark_3;
+
+$color_cell:          $color_pink;
+$color_cell_checked:  $color_dark_1;
+$color_cell_text:     $color_white;
+$color_cell_ch_text:  $color_tr_white;
+$color_cell_border:   $color_blue;

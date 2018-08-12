@@ -1,43 +1,111 @@
-#game .game-table {
+/* Bingo Game Component */
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+#game {
+  .game-table {
     border-collapse: collapse;
-    /*margin-bottom: 50px;*/
-}
-#game .game-table .game-cell-wrap {
-    width: calc(20% - 20px);
-    height: 100px;
-    padding: 10px;
-    float: left;
-}
-#game .game-table .game-cell {
-    height: 80px;
-    padding: 8px;
-    background-color: #ff3366;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    text-align: center;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: bold;
-    border: 2px solid #ff3366;
-    user-select: none;
 
-    transition: border 0.1s ease-in-out, background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-#game .game-table .game-cell.active {
-    background-color: #2A273A;
-    border: 2px solid #2A273A;
-    color: rgba(255,255,255,0.1);
-}
-#game .game-table .game-cell:hover {
-    /*background-color: #00acee;*/
-    border: 2px solid #00acee;
-    cursor: pointer;
+    .game-cell-wrap {
+      width: calc(20% - 20px);
+      height: 100px;
+      padding: 10px;
+      float: left;
+
+      @include respond-to(tablet) {
+        height: 80px;
+      }
+
+      @include respond-to(phone) {
+        width: calc(20% - 10px);
+        padding: 5px;
+        height: 15vw;
+      }
+    }
+
+    .game-cell {
+      height: 80px;
+      padding: 8px;
+      background-color: $color_cell;
+      border: 2px solid $color_cell;
+      color: $color_cell_text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      user-select: none;
+
+      transition:
+        border 0.1s ease-in-out,
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+
+      @include respond-to(tablet) {
+        height: 60px;
+        font-size: 12px;
+      }
+
+      @include respond-to(phone) {
+        height: 10vw;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      &.active {
+        background-color: $color_cell_checked;
+        border: 2px solid $color_cell_checked;
+        color: $color_cell_ch_text;
+      }
+
+      &:hover {
+        /*background-color: #00acee;*/
+        border: 2px solid $color_cell_border;
+        cursor: pointer;
+      }
+
+      .game-cell-name {
+        @include respond-to(phone) {
+          display: none;
+        }
+      }
+      .game-cell-number {
+        display: none;
+        @include respond-to(phone) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .game-mobile {
+    margin-top: 30px;
+    display: none;
+    @include respond-to(phone) {
+      display: block;
+    }
+
+    .game-cond-item {
+      color: white;
+      padding-bottom: 15px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .game-cond-id {
+      float: left;
+      width: 15%;
+      text-align: center;
+    }
+
+    .game-cond-name {
+      float: left;
+      width: 85%;
+    }
+  }
 }
 
-.clearfix:after {
-    display: block;
-    content: '';
-    clear: both;
-}
+
+
