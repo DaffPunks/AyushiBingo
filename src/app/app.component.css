@@ -1,0 +1,156 @@
+#main {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  color: #47cf73;
+
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  padding-top: 50px;
+  background-color: #242132;
+}
+
+.container {
+  width: 750px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+
+
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #2A273A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #211E2D 2px solid;
+}
+#header .header-logo {
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 40px;
+}
+#header .header-account {
+  padding: 0 20px;
+}
+#header .header-account-logout {
+  height: 20px;
+  width: 20px;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MS4yIDQ3MS4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzEuMiA0NzEuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMjcuNjE5LDQ0NC4yaC0xMjIuOWMtMzMuNCwwLTYwLjUtMjcuMi02MC41LTYwLjVWODcuNWMwLTMzLjQsMjcuMi02MC41LDYwLjUtNjAuNWgxMjQuOWM3LjUsMCwxMy41LTYsMTMuNS0xMy41ICAgIHMtNi0xMy41LTEzLjUtMTMuNWgtMTI0LjljLTQ4LjMsMC04Ny41LDM5LjMtODcuNSw4Ny41djI5Ni4yYzAsNDguMywzOS4zLDg3LjUsODcuNSw4Ny41aDEyMi45YzcuNSwwLDEzLjUtNiwxMy41LTEzLjUgICAgUzIzNS4wMTksNDQ0LjIsMjI3LjYxOSw0NDQuMnoiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNNDUwLjAxOSwyMjYuMWwtODUuOC04NS44Yy01LjMtNS4zLTEzLjgtNS4zLTE5LjEsMGMtNS4zLDUuMy01LjMsMTMuOCwwLDE5LjFsNjIuOCw2Mi44aC0yNzMuOWMtNy41LDAtMTMuNSw2LTEzLjUsMTMuNSAgICBzNiwxMy41LDEzLjUsMTMuNWgyNzMuOWwtNjIuOCw2Mi44Yy01LjMsNS4zLTUuMywxMy44LDAsMTkuMWMyLjYsMi42LDYuMSw0LDkuNSw0czYuOS0xLjMsOS41LTRsODUuOC04NS44ICAgIEM0NTUuMzE5LDIzOS45LDQ1NS4zMTksMjMxLjMsNDUwLjAxOSwyMjYuMXoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+  background-size: contain;
+  cursor: pointer;
+}
+
+
+#cards {
+
+}
+#cards .card {
+  width: calc(33.333333% - 40px);
+  float: left;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px 20px;
+}
+#cards .card-head {
+  margin: 0 5px 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cards .card-name {
+  font-weight: 700;
+}
+#cards .card-table {
+}
+#cards .card-cell-wrap {
+  padding: 5px;
+  width: calc(20% - 10px);
+  float: left;
+  text-align: center;
+}
+#cards .card-cell {
+  padding: 6px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.5);
+}
+#cards .card-cell.selected {
+  color: white;
+}
+
+/* Yellow color */
+.card.yellow {
+  background-color: #FF9800;
+}
+.card.yellow .card-cell.selected {
+  background-color: #F47B00;
+}
+.card.yellow .card-cell,
+.card.yellow .card-head{
+  background-color: #FB8C00;
+}
+
+/* Red Color */
+.card.red {
+  background-color: #F44336;
+}
+.card.red .card-cell.selected {
+  background-color: #D22E2F;
+}
+.card.red .card-cell,
+.card.red .card-head{
+  background-color: #E53935;
+}
+
+/* Blue Color */
+.card.blue {
+  background-color: #00BCD4;
+}
+.card.blue .card-cell.selected {
+  background-color: #0096A6;
+}
+.card.blue .card-cell,
+.card.blue .card-head{
+  background-color: #00ACC1;
+}
+
+
+
+#version {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 2px 10px;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}

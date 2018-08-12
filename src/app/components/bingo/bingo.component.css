@@ -1,0 +1,43 @@
+#game .game-table {
+    border-collapse: collapse;
+    /*margin-bottom: 50px;*/
+}
+#game .game-table .game-cell-wrap {
+    width: calc(20% - 20px);
+    height: 100px;
+    padding: 10px;
+    float: left;
+}
+#game .game-table .game-cell {
+    height: 80px;
+    padding: 8px;
+    background-color: #ff3366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #ff3366;
+    user-select: none;
+
+    transition: border 0.1s ease-in-out, background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+#game .game-table .game-cell.active {
+    background-color: #2A273A;
+    border: 2px solid #2A273A;
+    color: rgba(255,255,255,0.1);
+}
+#game .game-table .game-cell:hover {
+    /*background-color: #00acee;*/
+    border: 2px solid #00acee;
+    cursor: pointer;
+}
+
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}

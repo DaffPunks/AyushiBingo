@@ -1,0 +1,69 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div id="main">
+  <section id="header">
+    <div class="header-logo">
+      Ayushi Bingo
+    </div>
+    <div class="header-account" *ngIf="loggedIn">
+      <div class="header-account-name"></div>
+      <div class="header-account-logout" (click)="logout()"></div>
+    </div>
+  </section>
+  <div class="container">
+    <app-bingo *ngIf="loggedIn"></app-bingo>
+  </div>
+  <section id="version">
+    alpha 0.2.0
+  </section>
+
+  <div class="fullscreen" *ngIf="!loggedIn">
+    <app-auth (loginIn)="loginEvent()"></app-auth>
+  </div>
+</div>
+
+
+
+
+<!--
+<div id="cards" class="clearfix">
+  <div class="card yellow">
+    <div class="card-head">
+      <div class="card-name">Anton</div>
+      <div class="card-count">-</div>
+    </div>
+    <div class="card-table clearfix">
+      <div class="card-cell-wrap" *ngFor="let item of friendCells">
+        <div class="card-cell" [ngClass]="{'selected': item == '12'}">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card red">
+    <div class="card-head">
+      <div class="card-name">Klim</div>
+      <div class="card-count">-</div>
+    </div>
+    <div class="card-table clearfix">
+      <div class="card-cell-wrap" *ngFor="let item of friendCells">
+        <div class="card-cell" [ngClass]="{'selected': item == '12'}">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card blue">
+    <div class="card-head">
+      <div class="card-name">Roma</div>
+      <div class="card-count">-</div>
+    </div>
+    <div class="card-table clearfix">
+      <div class="card-cell-wrap" *ngFor="let item of friendCells">
+        <div class="card-cell" [ngClass]="{'selected': item == '12'}">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->

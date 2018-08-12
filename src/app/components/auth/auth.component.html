@@ -1,0 +1,41 @@
+<div id="auth">
+  <div class="auth-wrap">
+    <div class="auth-modal">
+      <!-- Login screen -->
+      <div class="login" *ngIf="screen == 'login'">
+        <div class="auth-title">Welcome back!</div>
+        <div class="auth-input">
+          <input type="text" placeholder="Username" [(ngModel)]="username">
+        </div>
+        <div class="auth-input">
+          <input type="password" placeholder="Password" [(ngModel)]="password">
+        </div>
+        <div class="auth-input">
+          <button (click)="doLogin()">Login</button>
+        </div>
+        <div class="auth-action" (click)="changeScreen('register')">
+          Not a member? Sign up now
+        </div>
+      </div>
+      <!-- Register screen -->
+      <div class="register" *ngIf="screen == 'register'">
+        <div class="auth-title">Hello yopta!</div>
+        <div class="auth-input">
+          <input type="text" placeholder="Username" [(ngModel)]="username">
+        </div>
+        <div class="auth-input">
+          <input type="password" placeholder="Password" [(ngModel)]="password">
+        </div>
+        <div class="auth-input">
+          <input type="password" placeholder="Repeat password" [(ngModel)]="repassword">
+        </div>
+        <div class="auth-input">
+          <button (click)="doRegister()">Register</button>
+        </div>
+        <div class="auth-action" (click)="changeScreen('login')">
+          Already here? Huli zashel togda syuda?
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div id="game">
+  <div class="game-table clearfix" *ngIf="cells && my_cells">
+    <div class="game-cell-wrap" *ngFor="let item of cells">
+      <div class="game-cell" [ngClass]="{'active': isChecked(item.id)}" (click)="toggleCell(item.id)">
+        {{item.condition}}
+      </div>
+    </div>
+  </div>
+</div>
