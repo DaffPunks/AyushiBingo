@@ -7,8 +7,8 @@ import {catchError, map, retry} from "rxjs/operators";
 @Injectable()
 export abstract class RestService {
 
-  public baseUrl = "http://ayu.develop/";
-  // public baseUrl = "https://ayushibingoapi.herokuapp.com/";
+  // public baseUrl = "http://ayu.develop/";
+  public baseUrl = "https://ayushibingoapi.herokuapp.com/";
   protected apiUrl = "rest/";
 
   protected token = '';
